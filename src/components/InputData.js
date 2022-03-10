@@ -38,7 +38,15 @@ class InputData extends React.Component {
     const { peso, altura, result } = this.state;
     return (
       <>
-        <Form>
+        <h1 className="text-center">Calculadora de Indice de Massa Corporal</h1>
+        <Form
+          style={{
+            padding: '4rem',
+            margin: '1rem 2rem',
+            backgroundColor: 'rgb(184, 159, 235)',
+            borderRadius: '0.3rem',
+          }}
+        >
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Peso</Form.Label>
             <Form.Control
@@ -69,7 +77,7 @@ class InputData extends React.Component {
             Calcular
           </Button>
         </Form>
-        {!!result && <p>O seu IMC é: {result}</p>}
+        {!!result && <h2 className="text-center">O seu IMC é : {result}</h2>}
       </>
     );
   }
